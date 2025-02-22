@@ -14,7 +14,7 @@ interface CartProductItemProps {
 const CartProductItem = ({product}: CartProductItemProps) => {
     const {decreaseProductQuantity, increaseProductQuantity, removeProduct} = useContext(CartContext)
     return ( 
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between py-2">
             <div className="flex items-center gap-3">
                 <div className="relative h-20 w-20 bg-gray-100 rounded-xl">
                     <Image src={product.imageUrl} alt={product.name} fill/>
