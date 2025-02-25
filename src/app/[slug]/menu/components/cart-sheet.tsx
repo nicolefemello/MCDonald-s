@@ -11,12 +11,12 @@ import {
 } from "@/components/ui/sheet";
 import { formatCurrency } from "@/helpers/format-currency";
 
-import { CartContext } from "../../contexts/cart";
+import { CartContext } from "../contexts/cart";
 import CartProductItem from "./cart-product-item";
 import FinishOrderDialog from "./finish-order-dialog";
 
 const CartSheet = () => {
-  const [finishOrderDialog, setFinishOrderDialogIsOpen] = useState(false);
+  const [finishOrderDialogIsOpen, setFinishOrderDialogIsOpen] = useState(false);
   const { isOpen, toggleCart, products, total } = useContext(CartContext);
   return (
     <Sheet open={isOpen} onOpenChange={toggleCart}>
@@ -47,7 +47,7 @@ const CartSheet = () => {
             Finalizar pedido
           </Button>
           <FinishOrderDialog
-            open={finishOrderDialog}
+            open={finishOrderDialogIsOpen}
             onOpenChange={setFinishOrderDialogIsOpen}
           />
         </div>

@@ -10,6 +10,7 @@ import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { formatCurrency } from "@/helpers/format-currency";
 
 import { CartContext } from "../contexts/cart";
+import CartSheet from "./cart-sheet";
 import Products from "./products";
 
 interface RestaurantCategoriesProps {
@@ -92,6 +93,7 @@ const RestaurantCategories = ({ restaurant }: RestaurantCategoriesProps) => {
             </p>
           </div>
           <Button onClick={toggleCart}>Ver sacola</Button>
+          <CartSheet />
         </div>
       )}
     </div>
