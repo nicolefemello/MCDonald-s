@@ -3,7 +3,6 @@
 import { ConsumptionMethod } from "@prisma/client";
 import { redirect } from "next/navigation";
 
-import { getRestaurantBySlug } from "@/data/get-restaurant-by-slug";
 import { db } from "@/lib/prisma";
 
 import { removeCpfPunctuation } from "../helpers/cpf";
