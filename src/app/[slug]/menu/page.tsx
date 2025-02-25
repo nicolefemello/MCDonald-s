@@ -22,6 +22,7 @@ const RestaurantMenuPage = async ({
   const { consumptionMethod } = await searchParams;
   if (!isConsumptionMethodValid(consumptionMethod)) return notFound();
   const restaurant = await getRestaurantBySlug(slug);
+  if (!restaurant) return <div>Restaurante não encontrado</div>;
   return (
     <div>
       <RestaurantHeader restaurant={restaurant} />
